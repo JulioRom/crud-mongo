@@ -6,15 +6,12 @@ export type PersonDocument = HydratedDocument<Person>;
 @Schema()
 export class Person {
   @Prop()
-  id: string;
-
-  @Prop()
   name: string;
 
   @Prop()
   age: number;
 
-  @Prop()
+  @Prop({ index: true, unique: true })
   rut: number;
 
   @Prop({ default: Date.now })
