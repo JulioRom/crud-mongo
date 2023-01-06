@@ -36,8 +36,8 @@ export class PersonService {
     return nPerson;
   }
   //reading person collection
-  async getPerson(): Promise<Person[]> {
-    return await this.personModel.find({});
+  async getPeople(): Promise<Person[]> {
+    return await this.personModel.find().exec();
   }
 
   //update person

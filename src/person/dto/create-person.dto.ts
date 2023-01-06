@@ -2,6 +2,7 @@ import {
   IsInt,
   IsNotEmpty,
   IsNumber,
+  IsObject,
   IsString,
   MinLength,
 } from 'class-validator';
@@ -18,6 +19,8 @@ export class CreatePersonDto {
 
   @IsNumber()
   @IsNotEmpty()
-  @IsNotEmpty()
   rut: number;
+
+  @IsObject()
+  properties: object;
 }

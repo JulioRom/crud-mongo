@@ -28,7 +28,7 @@ export class PersonController {
   @Get()
   @HttpCode(HttpStatus.OK)
   async getPeople() {
-    return await this.appService.getPerson();
+    return await this.appService.getPeople();
   }
 
   @Put(':id')
