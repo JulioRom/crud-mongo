@@ -14,9 +14,6 @@ export class Person {
   @Prop({ index: true, unique: true })
   rut: number;
 
-  @Prop({ type: Object, default: {} })
-  properties: object;
-
   @Prop({ default: Date.now })
   create_date: Date;
 
